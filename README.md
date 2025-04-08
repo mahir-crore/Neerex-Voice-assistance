@@ -1,86 +1,40 @@
-# Neerex - AI Virtual Voice Assistant
+# Neerex (AI Virtual Voice Assistant)
 
-**Neerex** ek voice-controlled AI assistant hai jo Python mein bana hai. Yeh aapki awaaz se system ke tasks, web search, screen recording, news reading aur kai aur kaam karta hai. Isme OpenAI ka GPT model bhi integrated hai jo smart responses deta hai.
+#### This is my attempt to create a smart voice-controlled assistant like JARVIS, named **Neerex**.
+#### It's not a movie-level AI yet, but it can do a lot of useful and fun tasks on your PC/laptop — all with your voice.
 
----
+## Built With
 
-## 🔧 Features
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code>
 
-- 🎙️ Voice command recognition (English + Hindi)
-- 🧠 AI answers via OpenAI GPT
-- 🌐 Web browsing aur Google search
-- 🖥️ Applications open karna (e.g. Notepad, Chrome)
-- 🖼️ Screenshot lena
-- 📹 Screen recording with voice command
-- 📰 News headlines sunana (via NewsAPI)
-- 🔊 Text-to-speech (GTTS + Pygame)
-- 🕒 Time-based greetings
-- 🔌 System shutdown / restart
-- 🎬 YouTube video search aur auto-play
+## Features
 
----
+It can do a variety of tasks such as:
 
-## 💻 Installation & Setup
+- Greet user based on time of day
+- Activate with wake words: `suno`, `start`, `shur karo`, `neerex`
+- Launch desktop applications (e.g., Notepad, Chrome)
+- Perform Google searches
+- Open websites directly
+- Read top headlines using NewsAPI
+- Take screenshots on voice command
+- Start and stop screen recording
+- Answer questions using OpenAI GPT (chatbot style)
+- Speak using both pyttsx3 and GTTS (Google Text-to-Speech)
+- Provide current time/date
+- Shutdown or restart system
+- Play YouTube videos based on query
+- Exit or pause listening mode via command
 
-### 1. Clone ya code download karo
+## API Keys
 
-```bash
-git clone https://github.com/your-username/neerex.git
-cd neerex
-Required packages install karo:
+To run this program, you’ll need the following API keys:
 
-bash
-Copy
-Edit
-pip install speechrecognition pyttsx3 gtts pygame keyboard opencv-python numpy pyautogui requests openai
-API Keys add karo main.py mein:
+- [OpenAI API Key](https://platform.openai.com/account/api-keys)
+- [NewsAPI Key](https://newsapi.org/)
 
-python
-Copy
-Edit
+Add them in `main.py` file:
+
+```python
 client = OpenAI(api_key="your_openai_api_key")
 newsapi = "your_newsapi_key"
- API Keys ke liye:
-
-OpenAI → https://platform.openai.com/account/api-keys
-
-NewsAPI → https://newsapi.org/
-
- How to Run
-bash
-Copy
-Edit
-python main.py
-Fir assistant wake word sunega. Aap bol sakte ho:
-
-suno
-
-start
-
-shur karo
-
-neerex
-
-Uske baad assistant active hoke aapke commands sunega. Aap bol sakte ho:
-
-open notepad
-
-search python tutorial
-
-start screen recording
-
-news
-
-shutdown
-
-exit (command mode band karne ke liye)
-
-🎙️ Sample Commands
-🗣 Command	✅ Action
-open notepad	Notepad kholta hai
-search python tips	Google search karta hai
-screenshot	Screenshot leta hai
-news	Latest headlines sunata hai
-shutdown	System shutdown hota hai
-start screen recording	Screen recording start karta hai
-exit / stop / back	Assistant listening band kar deta
